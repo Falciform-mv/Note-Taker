@@ -6,7 +6,8 @@ const { notes } = require('../db/db.json');
 
 router.get('/api/notes', (req, res) => {
   // res.json(db);
-  res.send('hello test');
+  let results = notes;
+  res.json(results);
 })
 
 
