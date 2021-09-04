@@ -13,7 +13,10 @@ app.use(express.static('public'));
 app.use('/', htmlRoutes);
 app.use('/', apiRoutes)
 
-
+function createNewNote(body, notesArray) {
+ console.log(body);
+ return body;
+}
 
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);

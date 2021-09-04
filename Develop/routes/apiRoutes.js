@@ -10,4 +10,22 @@ router.get('/api/notes', (req, res) => {
 })
 
 
+// function createNewNote(body, notesArray) {
+//   const note = body;
+//   notesArray.push(note);
+//   false.writeFileSync(
+//     path.join(__dirname, '../db/db.json'),
+//     JSON.stringify({ notesArray }, null, 2)
+//   );
+//   return note;
+// }
+
+router.post('/api/notes', (req, res) => {
+  console.log(req.body);
+  res.json(req.body);
+  // const note = createNewNote(req.body, db);
+  // res.json(note);
+})
+
+
 module.exports = router;
